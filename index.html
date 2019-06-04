@@ -45,61 +45,32 @@
            ];
       </script>
 
-      <script type = "text/javascript">
-        <!--
-         // Form validation code will come here.
-         function validate() {
+      <script>
+          const signUpForm = document.getElementById('signUpForm');
+          const emailField = document.getElementById('inputEmail');
+          const okButton = document.getElementById('trigger');
 
-            if( document.myForm.FirstName.value == "" ) {
-               alert( "Please provide your first name!" );
-               document.myForm.Name.focus() ;
-               return false;
-            }
-            if( document.myForm.LastName.value == "" ) {
-               alert( "Please provide your last name!" );
-               document.myForm.LastName.focus() ;
-               return false;
-            }
-            if( document.myForm.inputEmail.value == "" ) {
-               alert( "Please provide your email!" );
-               document.myForm.inputEmail.focus() ;
-               return false;
-            }
-            if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
-               document.myForm.Zip.value.length != 5 ) {
+          emailField.addEventListener('keyup', function (event) {
+            isValidEmail = emailField.checkValidity();
 
-               alert( "Please provide a zip in the format #####." );
-               document.myForm.Zip.focus() ;
-               return false;
+            if ( isValidEmail ) {
+              okButton.disabled = false;
+            } else {
+              okButton.disabled = true;
             }
-            return( true );
-         }
-      //-->
+          });
+
+          okButton.addEventListener('click', function (event) {
+            signUpForm.submit();
+          });
       </script>
-
-      <script type = "text/javascript">
-       <!--
-          function validateEmail() {
-             var emailID = document.myForm.EMail.value;
-             atpos = emailID.indexOf("@");
-             dotpos = emailID.lastIndexOf(".");
-
-             if (atpos < 1 || ( dotpos - atpos < 2 )) {
-                alert("Please enter correct email ID")
-                document.myForm.EMail.focus() ;
-                return false;
-             }
-             return( true );
-          }
-       //-->
-    </script>
 
   </head>
 
   <body>
 
 
-<form action=thankyou.html name = "myForm" onsubmit = "return(validate());">
+<form action=thankyou.html name = "signUpForm" onsubmit = "return(validate());">
     Email: <input  type="text" name="inputEmail" value="" id="inputEmail">  <br>
     First Name: <input type="text" name="FirstName" value="" id="FirstName"> <br>
     Last Name: <input type="text" name="LastName" value="" id="LastName"> <br>
@@ -114,4 +85,4 @@
 
 
 
-version 1.15
+version 1.16
