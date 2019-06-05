@@ -16,13 +16,11 @@
         {
           "purpose": "5a7e29c3-9b5b-4c69-b995-54d92f3208c0",
           "identifierAttributes": "id",
-          "identifierValues": "Brand X - Marketing Site - SS Test"
+          "identifierValues": "optIn"
         }
       ];
     </script>
     <!-- OneTrust Consent Receipt End -->
-    <!-- OneTrust Consent Receipt End -->
-
 
     <script type="text/javascript" charset="UTF-8">
         OneTrust.ScriptTag.DataElements = [
@@ -45,24 +43,26 @@
            ];
       </script>
 
+      <style type="text/css">
+          input:focus, textarea:focus, select:focus{
+              outline: none;
+          }
+      </style>
+
       <script>
-          const signUpForm = document.getElementById('signUpForm');
-          const emailField = document.getElementById('inputEmail');
-          const okButton = document.getElementById('trigger');
+        function activateBtn() {
+              // Get the checkbox
+              var checkBox = document.getElementById("optIn");
+              // Get the output text
+              var text = document.getElementById("text");
 
-          emailField.addEventListener('keyup', function (event) {
-            isValidEmail = emailField.checkValidity();
-
-            if ( isValidEmail ) {
-              okButton.disabled = false;
-            } else {
-              okButton.disabled = true;
+              // If the checkbox is checked, display the output text
+              if (checkBox.checked == true){
+                okButton.disabled=false;
+              } else {
+                okButton.disabled=true;
+              }
             }
-          });
-
-          okButton.addEventListener('click', function (event) {
-            signUpForm.submit();
-          });
       </script>
 
   </head>
@@ -70,19 +70,57 @@
   <body>
 
 
-<form action=thankyou.html id = "signUpForm">
-    Email: <input  type="text" name="inputEmail" value="" id="inputEmail">  <br>
-    First Name: <input type="text" name="FirstName" value="" id="FirstName"> <br>
-    Last Name: <input type="text" name="LastName" value="" id="LastName"> <br>
-    NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br>
-    <input type="checkbox" name="AA" value="Brand X - Marketing Site - SS Test" id="Brand X - Marketing Site - SS Test"> To opt-in click here<br>
-    <input type="submit" value="trigger" id="trigger">
+<form action=thankyou.html id="signUpForm">
+    Email: <input  type="email" name="inputEmail" id="inputEmail">  <br><br>
+    First Name: <input type="text" name="FirstName" id="FirstName"> <br><br>
+    Last Name: <input type="text" name="LastName" id="LastName"> <br><br>
+    NPINumber: <input type="number" name="NPINumber" id="NPINumber"> <br><br>
+<input type="checkbox" name=optin id="optIn" onclick="activateBtn()">
+   <label id=optinlabel>To opt-in click here</label><br><br>
+    <input type="submit" value="trigger" id="trigger" onclick="" disabled>
 </form>
+
+
+<br>
+
+<script>
+    const signUpForm = document.getElementById('signUpForm');
+    const emailField = document.getElementById('inputEmail');
+    const fnField = document.getElementById('FirstName');
+    const lnField = document.getElementById('LastName');
+    const npiField = document.getElementById('NPINumber');
+    const cbField = document.getElementById('Brand X - Marketing Site - SS Test');
+    const okButton = document.getElementById('trigger');
+
+    emailField.addEventListener('keyup', function (event) {
+      isValidEmail = emailField.checkValidity();
+      if ( isValidEmail ) {
+        emailField.style.borderColor = "";
+      } else {
+        emailField.style.borderColor = "red";
+      }
+    });
+
+
+    okButton.addEventListener('click', function (event) {
+      signUpForm.submit();
+    });
+</script>
+
+<br ><hr><br />
+
+<table border=0 width=100%>
+  <tr>
+    <td valign="top">RELLYANT</td>
+    <td width=100% style="text-align:right">Privacy Policy
+    <br />
+    Consent Preference center
+    <br /> Unsubscribe
+    <br />
+  version 1.21</td>
+  </tr>
+</table>
 
 
 </body>
 </html>
-
-
-
-version 1.17
