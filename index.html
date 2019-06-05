@@ -18,7 +18,7 @@
 </script>
 
 
-<form action=thankyou.html id="signUpForm">
+<form action=index.html>
     Email: <input  type="text" name="inputEmail" value="" id="inputEmail">  <br><br>
 First Name:  <input type="text" name="FirstName" value="" id="FirstName"> <br><br>
 Last Name : <input type="text" name="LastName" value="" id="LastName"> <br><br>
@@ -42,30 +42,6 @@ NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br><br>
   version 1.29</td>
   </tr>
 </table>
-
-<script>
-    const signUpForm = document.getElementById('signUpForm');
-    const emailField = document.getElementById('inputEmail');
-    const fnField = document.getElementById('FirstName');
-    const lnField = document.getElementById('LastName');
-    const npiField = document.getElementById('NPINumber');
-    const cbField = document.getElementById('Brand X - Marketing Site - SS Test');
-    const okButton = document.getElementById('trigger');
-
-    emailField.addEventListener('keyup', function (event) {
-      isValidEmail = emailField.checkValidity();
-      if ( isValidEmail ) {
-        emailField.style.borderColor = "";
-      } else {
-        emailField.style.borderColor = "red";
-      }
-    });
-
-
-    okButton.addEventListener('click', function (event) {
-      signUpForm.submit();
-    });
-</script>
 
 
 <!-- OneTrust Consent Receipt Start -->
