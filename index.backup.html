@@ -1,16 +1,49 @@
+<style type="text/css">
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+</style>
+
+<script>
+  function activateBtn() {
+        var checkBox = document.getElementById("optIn");
+        var text = document.getElementById("text");
+
+        if (checkBox.checked == true){
+          okButton.disabled=false;
+        } else {
+          okButton.disabled=true;
+        }
+      }
+</script>
+
 
 <form action=index.html>
-    Email<input  type="text" name="inputEmail" value="" id="inputEmail">  <br>
-First Name <input type="text" name="FirstName" value="" id="FirstName"> <br>
-Last Name <input type="text" name="LastName" value="" id="LastName"> <br>
-NPINumber <input type="text" name="NPINumber" value="" id="NPINumber"> <br>
-<input type=checkbox name=optIN id=optin> check here
-  <input type="submit" value="trigger" id="trigger">
+    Email: <input  type="text" name="inputEmail" value="" id="inputEmail">  <br><br>
+First Name:  <input type="text" name="FirstName" value="" id="FirstName"> <br><br>
+Last Name : <input type="text" name="LastName" value="" id="LastName"> <br><br>
+NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br><br>
+<input type=checkbox name=optIN id=optin> check here<br><br>
+
+  <input type="submit" value="Submit" id="trigger">
 </form>
 
 
-<!-- OneTrust Consent Receipt Start -->
-<!-- OneTrust Consent Receipt Start -->
+<br ><hr><br />
+
+<table border=0 width=100%>
+  <tr>
+    <td valign="top">RELLYANT</td>
+    <td width=100% style="text-align:right">Privacy Policy
+    <br />
+    Consent Preference center
+    <br /> Unsubscribe
+    <br />
+  version 1.21</td>
+  </tr>
+</table>
+
+
 <!-- OneTrust Consent Receipt Start -->
 <script src="https://privacyportal-cdn.onetrust.com/consent-receipt-scripts/scripts/otconsent-1.0.min.js" type="text/javascript" charset="UTF-8" id="consent-receipt-script">
   triggerId="trigger";
@@ -52,5 +85,3 @@ NPINumber <input type="text" name="NPINumber" value="" id="NPINumber"> <br>
 
        ];
   </script>
-
-version 1.13
