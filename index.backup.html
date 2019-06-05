@@ -18,14 +18,13 @@
 </script>
 
 
-<form action=index.html>
-    Email: <input  type="text" name="inputEmail" value="" id="inputEmail">  <br><br>
+<form action=thankyou.html id="signUpForm">
+    Email: <input  type="email" name="inputEmail" value="" id="inputEmail">  <br><br>
 First Name:  <input type="text" name="FirstName" value="" id="FirstName"> <br><br>
 Last Name : <input type="text" name="LastName" value="" id="LastName"> <br><br>
-NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br><br>
-<input type=checkbox name=optIN id=optin> check here<br><br>
-
-  <input type="submit" value="Submit" id="trigger">
+NPINumber: <input type="number" name="NPINumber" value="" id="NPINumber"> <br><br>
+<input type=checkbox name=optin id=optin onclick="activateBtn()"> <label id=optinlabel>To opt-in click here</label><br><br>
+  <input type="submit" value="Submit" id="trigger" disabled>
 </form>
 
 
