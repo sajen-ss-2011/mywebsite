@@ -1,49 +1,47 @@
+<style type="text/css">
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+</style>
 
-<html>
-  <head>
-    <title>POV - Consent - OneTrust</title>
+<script>
+  function activateBtn() {
+        var checkBox = document.getElementById("optin");
+        var text = document.getElementById("text");
 
-
-
-      <style type="text/css">
-          input:focus, textarea:focus, select:focus{
-              outline: none;
-          }
-      </style>
-
-      <script>
-        function activateBtn() {
-              // Get the checkbox
-              var checkBox = document.getElementById("optIn");
-              // Get the output text
-              var text = document.getElementById("text");
-
-              // If the checkbox is checked, display the output text
-              if (checkBox.checked == true){
-                okButton.disabled=false;
-              } else {
-                okButton.disabled=true;
-              }
-            }
-      </script>
-
-  </head>
-
-  <body>
+        if (checkBox.checked == true){
+          okButton.disabled=false;
+        } else {
+          okButton.disabled=true;
+        }
+      }
+</script>
 
 
 <form action=thankyou.html id="signUpForm">
-    Email: <input  type="email" name="inputEmail" id="inputEmail">  <br><br>
-    First Name: <input type="text" name="FirstName" id="FirstName"> <br><br>
-    Last Name: <input type="text" name="LastName" id="LastName"> <br><br>
-    NPINumber: <input type="number" name="NPINumber" id="NPINumber"> <br><br>
-<input type="checkbox" name=optin id="optIn" onclick="activateBtn()">
-   <label id=optinlabel>To opt-in click here</label><br><br>
-    <input type="submit" value="trigger" id="trigger" onclick="" disabled>
+    Email: <input  type="text" name="inputEmail" value="" id="inputEmail">  <br><br>
+First Name:  <input type="text" name="FirstName" value="" id="FirstName"> <br><br>
+Last Name : <input type="text" name="LastName" value="" id="LastName"> <br><br>
+NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br><br>
+<input type=checkbox name=optIN id=optin onclick="activateBtn()"> <label id=optinlabel>To opt-in click here</label><br><br>
+
+  <input type="submit" value="Submit" id="trigger" disabled>
 </form>
 
 
-<br>
+<br ><hr><br />
+
+<table border=0 width=100%>
+  <tr>
+    <td valign="top">RELLYANT</td>
+    <td width=100% style="text-align:right">Privacy Policy
+    <br />
+    Consent Preference center
+    <br /> Unsubscribe
+    <br />
+  version 1.28</td>
+  </tr>
+</table>
 
 <script>
     const signUpForm = document.getElementById('signUpForm');
@@ -83,11 +81,13 @@
     {
       "purpose": "5a7e29c3-9b5b-4c69-b995-54d92f3208c0",
       "identifierAttributes": "id",
-      "identifierValues": "optIn"
+      "identifierValues": "optin"
     }
   ];
 </script>
 <!-- OneTrust Consent Receipt End -->
+<!-- OneTrust Consent Receipt End -->
+
 
 <script type="text/javascript" charset="UTF-8">
     OneTrust.ScriptTag.DataElements = [
@@ -96,12 +96,12 @@
         "identifierValues": "FirstName",
         "dataElementName": "FirstName"
       },
-    {
+	  {
         "identifierAttributes": "id",
         "identifierValues": "LastName",
         "dataElementName": "LastName"
       },
-    {
+	  {
         "identifierAttributes": "id",
         "identifierValues": "NPINumber",
         "dataElementName": "NPINumber"
@@ -109,21 +109,3 @@
 
        ];
   </script>
-
-<br ><hr><br />
-
-<table border=0 width=100%>
-  <tr>
-    <td valign="top">RELLYANT</td>
-    <td width=100% style="text-align:right">Privacy Policy
-    <br />
-    Consent Preference center
-    <br /> Unsubscribe
-    <br />
-  version 1.21</td>
-  </tr>
-</table>
-
-
-</body>
-</html>
