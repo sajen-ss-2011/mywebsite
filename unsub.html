@@ -5,11 +5,9 @@
 </style>
 
 <script>
-  const okButton = document.getElementById('trigger');
 
   function activateBtn() {
         var checkBox = document.getElementById("optin");
-        var text = document.getElementById("text");
 
         if (checkBox.checked == true){
           okButton.disabled=false;
@@ -22,13 +20,16 @@
 <br /><Br /><h3>Unsubscribe</h3>
 
 
-<form action= id="signUpForm">
+<form action="thankyou.html">
     Email: <input  type="text" name="inputEmail" value="" id="inputEmail">  <br><br>
 <input type=checkbox name=optIN id=optin onclick="activateBtn()"> <label id=optinlabel>To opt-out click here</label><br><br>
 
   <input type="submit" value="Submit" id="trigger" disabled>
 </form>
 
+<script>
+  const okButton = document.getElementById('trigger');
+</script>
 
 <br ><hr><br />
 
