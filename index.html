@@ -19,7 +19,7 @@
 
 
 <form action=thankyou.html>
-    Email: <input  type="text" name="inputEmail" value="" id="inputEmail">  <br><br>
+    Email: <input  type="email" name="inputEmail" value="" id="inputEmail">  <br><br>
 First Name:  <input type="text" name="FirstName" value="" id="FirstName"> <br><br>
 Last Name : <input type="text" name="LastName" value="" id="LastName"> <br><br>
 NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br><br>
@@ -38,7 +38,7 @@ NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br><br>
       <a href="privacy.html">Privacy Policy</a>
       <br /> <a href="unsub.html">Consent Preference center</a>
       <br /><Br />
-        version 1.35</td>
+        version 1.36</td>
   </tr>
 </table>
 
@@ -52,7 +52,6 @@ NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br><br>
     const okButton = document.getElementById('trigger');
 
     emailField.addEventListener('keyup', function (event) {
-      alert('in here');
       isValidEmail = emailField.checkValidity();
       if ( isValidEmail ) {
         emailField.style.borderColor = "";
