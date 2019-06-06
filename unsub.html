@@ -4,6 +4,20 @@
     }
 </style>
 
+<script>
+  const okButton = document.getElementById('trigger');
+
+  function activateBtn() {
+        var checkBox = document.getElementById("optin");
+        var text = document.getElementById("text");
+
+        if (checkBox.checked == true){
+          okButton.disabled=false;
+        } else {
+          okButton.disabled=true;
+        }
+      }
+</script>
 
 <br /><Br /><h3>Unsubscribe</h3>
 
