@@ -43,6 +43,31 @@ NPINumber: <input type="text" name="NPINumber" value="" id="NPINumber"> <br><br>
   </tr>
 </table>
 
+<script>
+    const signUpForm = document.getElementById('signUpForm');
+    const emailField = document.getElementById('inputEmail');
+    const fnField = document.getElementById('FirstName');
+    const lnField = document.getElementById('LastName');
+    const npiField = document.getElementById('NPINumber');
+    const cbField = document.getElementById('Brand X - Marketing Site - SS Test');
+    const okButton = document.getElementById('trigger');
+
+    emailField.addEventListener('keyup', function (event) {
+      isValidEmail = emailField.checkValidity();
+      if ( isValidEmail ) {
+        emailField.style.borderColor = "";
+      } else {
+        emailField.style.borderColor = "red";
+      }
+    });
+
+
+    okButton.addEventListener('click', function (event) {
+      signUpForm.submit();
+    });
+</script>
+
+
 
 <!-- OneTrust Consent Receipt Start -->
 <script src="https://privacyportal-cdn.onetrust.com/consent-receipt-scripts/scripts/otconsent-1.0.min.js" type="text/javascript" charset="UTF-8" id="consent-receipt-script">
